@@ -18,9 +18,9 @@ from django.contrib import admin
 from Post import views as post_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', post_views.post_read),
+    url(r'^post/read/', post_views.post_read),
     url(r'^post/list/', post_views.post_list),
     url(r'^post/edit/', post_views.post_edit),
-    url(r'^post/create', post_views.post_create),
-    
+    url(r'^post/create/', post_views.post_create),
+
 ]
