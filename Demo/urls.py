@@ -16,11 +16,16 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from Post import views as post_views
+from user import views as user_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^post/read/', post_views.post_read),
-    url(r'^post/list/', post_views.post_list),
+    url(r'', post_views.post_list),
     url(r'^post/edit/', post_views.post_edit),
     url(r'^post/create/', post_views.post_create),
+    url(r'^user/register/',user_views.register),
+    url(r'^user/login/',user_views.login),
+    url(r'^user/logout/',user_views.logout),
+    url(r'^user/info',user_views.info),
 
 ]
